@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Angular Test App</title>
+  <meta name="description" content="Angular App Test">
+  <meta name="author" content="Matías Aravena">
+
+  <!-- Latest compiled and minified CSS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="angular/angular.min.js"></script>
+  <script src="app/myapp.js"></script>
+  <script src="controllers/mainPageController.js"></script>
+  <script src="factory/users.js"></script>
+
+</head>
+
+<body ng-app="myApp">
+  <div ng-controller="mainPageController">
+
+    <h3> Lista de usuarios: </h3>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h5 ng-repeat="u in userList">[[u.username]]</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
