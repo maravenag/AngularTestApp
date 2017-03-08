@@ -19,18 +19,21 @@
   <script src="app/myapp.js"></script>
   <script src="controllers/mainPageController.js"></script>
   <script src="factory/users.js"></script>
+  <script src="factory/posts.js"></script>
 
 </head>
 
 <body ng-app="myApp">
   <div ng-controller="mainPageController">
 
-    <h3> Lista de usuarios: </h3>
-
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h5 ng-repeat="u in userList">[[u.username]]</h5>
+          <h3> Lista de usuarios: </h3>
+          <h5 ng-repeat="u in userList">
+            <strong>username:</strong> [[u.username]],
+            <strong>name</strong> :[[u.name]]
+          </h5>
         </div>
       </div>
     </div>
