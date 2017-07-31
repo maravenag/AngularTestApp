@@ -1,4 +1,5 @@
 app.factory('Posts', function ($http) {
+
     function Posts() {
         this.postList = []
     }

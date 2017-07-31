@@ -24,5 +24,5 @@ app.factory('Users', function ($http) {
         return found;
     }
 
-    return Users
+    return Users  //returns the constructor
 })

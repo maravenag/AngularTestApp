@@ -1,5 +1,7 @@
 app.controller('mainPageController', ['$scope', 'Users', 'Posts', function ($scope, Users, Posts) {
 
+    var otherName = "Felipe";
+    
     var users = new Users();
     users.getUsersList().then(function () {
         $scope.userList = users.userList;

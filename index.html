@@ -24,13 +24,14 @@
 </head>
 
 <body ng-app="myApp">
-  <div ng-controller="mainPageController">
+  <hola></hola>
 
+  <div ng-controller="mainPageController">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <h3> Lista de usuarios: </h3>
-          <h5 ng-repeat="u in userList">
+          <h5 ng-repeat="u in userList" ng-bind=[[u.username]] ng-click='console.log([[u.username]])'>
             <strong>username:</strong> [[u.username]],
             <strong>name</strong> :[[u.name]]
           </h5>
