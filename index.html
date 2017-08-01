@@ -24,8 +24,14 @@
 </head>
 
 <body ng-app="myApp">
-  <hola></hola>
 
+  <div ng-controller="nameController as m" ng-click="m.changeName(m)">
+    <h1> Main name [[m.name]]</h1>
+    <hola></hola>
+    <hola2 name="m.name"></hola2>
+  </div>
+
+ <!--
   <div ng-controller="mainPageController">
     <div class="container">
       <div class="row">
@@ -38,7 +44,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 </body>
 
